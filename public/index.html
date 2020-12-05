@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notes Homepage</title>
+    <meta name="description" content="This is the homepage of the notes app"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <link href="notes-app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1>Notes App</h1>
+        <p><i>Add and find notes whenever, plus so much more!</i></p>
+      </div>
+    </header>
+    <section class="actions">
+      <div class="actions-container">
+        <input type="text" id="notes_search" placeholder="Search for notes..." name="notes search"/>
+        <select name="Sort By" id="sort_by">
+          <option value="lastEdited">Sort by last edited</option>
+          <option value="recentlyCreated">Sort by recently created</option>
+          <option value="alphabetically">Sort alphabetically</option>
+        </select>
+        <span class="hide-notes"><input type="checkbox" name="hide" value="hide all notes" id="hide_all"><label for="hide_all">Hide all notes</label></span>
+        <button id="delete_all">Delete all</button>
+      </div>
+    </section>
+
+
+
+    <div class="body">
+      <div class="body-container">
+          <h3>You have <span id="note_length"></span> note(s)</h3>
+        <div id="note_container"></div>
+        <form action="urlofthepageontheserverthatthisformwillgo" method="post" id="notes_form">
+          <div class="note-container">
+            <p>
+              <input type="text" id="add_notes" placeholder="Add note..." name="added note">
+            </p>
+            <p>
+              <textarea placeholder="Add note body here" id="add_notes_body"></textarea>
+            </p>
+            <p>
+              <button>Add Note</button>
+            </p>
+          </div>
+        </form>
+      </div>
+  </div>
+
+
+
+
+
+    <script src="./scripts/index-bundle.js"></script>
+  </body>
+</html>
