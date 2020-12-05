@@ -32888,7 +32888,7 @@ var note = (0, _notes.findNote)(noteId);
 //populate the fields with their respective content
 editTitleEl.value = note.title;
 editBodyEl.value = note.body;
-updatedEl.textContent = "updated " + (0, _moment2.default)(note.updatedAt).fromNow();
+updatedEl.textContent = "this note was updated " + (0, _moment2.default)(note.updatedAt).fromNow();
 
 //add event listener for updateNote
 updateNoteFormEl.addEventListener("submit", function (e) {

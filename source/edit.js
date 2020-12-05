@@ -17,7 +17,7 @@ let note=findNote(noteId);
 //populate the fields with their respective content
 editTitleEl.value=note.title;
 editBodyEl.value=note.body;
-updatedEl.textContent=`updated ${moment(note.updatedAt).fromNow()}`;
+updatedEl.textContent=`this note was updated ${moment(note.updatedAt).fromNow()}`;
 
 //add event listener for updateNote
 updateNoteFormEl.addEventListener("submit",(e)=>{
