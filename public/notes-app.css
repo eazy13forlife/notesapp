@@ -114,8 +114,14 @@ div h3{
   display:block;
   height:40px;
   background-color:white;
-  padding-top:0.5em;
+  padding-top:0.4em;
+  font-size:1.5rem;
 
+}
+h2{
+  font-size:1.3rem;
+  margin-bottom:0.5rem;
+  color:#9e8264;
 }
 div #add_notes{
   margin-top:2em;
@@ -151,7 +157,7 @@ div.body{
 .body-container{
   width:60%;
   margin:auto;
-  margin-top:1em;
+  margin-top:1.3em;
   display:flex;
   flex-direction:column;
 }
