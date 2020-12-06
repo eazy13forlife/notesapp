@@ -3,8 +3,22 @@ import{setFilters} from "./filters.js"
 import{displayNotes} from "./views.js"
 
 
+const addFormEl=document.querySelector("#add_form");
+const notesFormEl=document.querySelector("#notes_form")
+const addNoteButton=document.querySelector("#add_note_button")
+  const allSpans=document.querySelectorAll(".dim-body");
 
+const dimPage=()=>{
+  allSpans.forEach((span)=>{
+    span.style.display="block";
+  })
+}
 
+const lightPage=()=>{
+  allSpans.forEach((span)=>{
+    span.style.display="none";
+  })
+}
 //display notes from the getgo so we can see them
 displayNotes();
 
@@ -23,6 +37,7 @@ document.querySelector("#notes_form").addEventListener("submit",(e)=>{
   displayNotes();
   e.target.elements.add_notes.value="";
   e.target.elements.add_notes_body.value="";
+  notesFormEl.setAttribute("style","display:none")
 })
 
 //change event for hide random noteCheckbox
@@ -54,4 +69,20 @@ window.addEventListener("storage", (e)=>{
   refreshNotes();
   displayNotes();
 }
+})
+//event listener when i click add button. a form appears in the middle of the page
+addFormEl.addEventListener("click",(e)=>{
+  notesFormEl.setAttribute("style","display:block");
+  dimPage();
+})
+
+//event listener for when i click anything on the page, remove the form in the middle of the page
+document.querySelector("html").addEventListener("click",(e)=>{
+  const id=e.target.id
+  if(id==="add_notes"||id==="add_notes_body"||id==="add_form"){
+    notesFormEl.setAttribute("style","display:block")
+  }else{
+    notesFormEl.setAttribute("style","display:none");
+    lightPage();
+  }
 })
