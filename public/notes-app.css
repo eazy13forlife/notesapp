@@ -146,6 +146,7 @@ div.body{
   flex-direction:column;
   justify-content:center;
   position:relative;
+  margin-bottom:1em;
 }
 .body-container{
   width:60%;
@@ -229,8 +230,8 @@ span.dim-body{
   z-index:10;
   width:40%;
 }
-#notes_form *{
-  border:1px solid green;
+.note-container input,.note-container textarea,.note-container button{
+  border:2px solid #9e8264;;
 }
 button#add_form{
   font-size:2rem;
