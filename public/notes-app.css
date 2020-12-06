@@ -218,6 +218,18 @@ span.dim-body{
   opacity:0.4;
   display:none;
 }
+#edit_title{
+  margin-top:2em;
+}
+#edit_body{
+  margin-top:1rem;
+}
+#update_note{
+  margin-top:2rem;
+}
+#remove_note{
+  margin-left:0.5rem;
+}
 /*end of body section*/
 
 /*start of form*/
